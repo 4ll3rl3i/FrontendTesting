@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Frontend Testing Index</title>
 </head>
 <body>
     <h1>
@@ -12,5 +12,20 @@
     <p>
         Test Body
     </p>
+    <script src="js/timeScript.js"></script>
+    <button onclick="getFormattedTime()">
+        Zeit in der Konsole loggen
+    </button>
+    <p id="specificTextField">0</p>
+    <button onclick="textfeldAendern()">Nummer erhöhen</button>
+
+    <script>
+        function textfeldAendern() {
+            // Das Textfeld per ID auswählen und den Wert ändern
+            let temp = Number(document.getElementById("specificTextField").textContent);
+            temp++;
+            document.getElementById("specificTextField").textContent = temp;
+        }
+    </script>
 </body>
 </html>
