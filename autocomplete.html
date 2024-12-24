@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>Frontend Testing Autocomplete</title>
+</head>
+
+<body>
+    <h1>
+        Test Header
+    </h1>
+    <p>
+        Test Body
+    </p>
+    <label for="siteSearch">Suche:</label>
+    <input type="text" id="siteSearch" list="suggestions" name="q" placeholder="Enter Champion...">
+    <script>
+        document.getElementById('siteSearch').addEventListener('keydown', (event) => {
+            if (event.key === "Enter") {
+                clearSearch();
+            }
+        });
+    </script>
+    <button onclick="clearSearch()">Search</button>
+    <datalist id="suggestions">
+    </datalist>
+
+    <table id="championTable" border="2">
+        <thead>
+            <tr>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody>
+
+        </tbody>
+    </table>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
